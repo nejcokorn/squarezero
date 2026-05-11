@@ -38,9 +38,10 @@ order before implementing a project:
 4. `04-security.md`
 5. `05-code-quality.md`
 6. `06-local-project-memory.md`
-7. `scenarios/`
-8. `architecture/`
-9. `prompts/implementation-checklist.md`
+7. `doc/documentation.md`
+8. `scenarios/`
+9. `architecture/`
+10. `prompts/implementation-checklist.md`
 
 Do not include `setup.md` in the implementation reading order. That file is for
 humans who want to connect these guidelines to another repository.
@@ -62,6 +63,11 @@ Build the actual usable product first. Do not default to a marketing landing
 page, demo shell, placeholder dashboard, or decorative mockup unless the user
 explicitly asks for that.
 
+## Documentation
+
+Write project documentation for implemented features and place it in the
+[`doc/`](doc/documentation.md) folder.
+
 ## Project Types Covered
 
 - CRM systems
@@ -81,5 +87,7 @@ The agent should:
 - Prefer simple, maintainable implementation over unnecessary abstraction.
 - Build complete flows with loading, empty, error, and permission states.
 - Treat security, validation, and authorization as default requirements.
+- Keep application code Docker-ready for local development and deployment.
 - Record durable project-specific decisions in local project memory.
+- Write or update documentation in the `doc/` folder for implemented features.
 - Verify changes with tests or a clear manual verification path.

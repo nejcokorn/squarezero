@@ -62,6 +62,10 @@ explicitly requests them or the existing project already uses a different stack.
 
 ### Docker
 
+Application code must be Docker-ready. When adding or changing services, make
+sure the project can be built and run through Docker for local development and
+deployment.
+
 Use separate containers for:
 
 - API: NestJS, Prisma, and related backend dependencies

@@ -26,6 +26,12 @@ Use this checklist before considering a feature or page complete.
 - Errors are handled consistently.
 - Important operations are logged where appropriate.
 
+## Infrastructure
+
+- Application code is Docker-ready for local development and deployment.
+- Docker configuration is updated when services, ports, dependencies, or
+  startup commands change.
+
 ## Security
 
 - Secrets are not hardcoded.
@@ -40,3 +46,8 @@ Use this checklist before considering a feature or page complete.
 - Linting passes where configured.
 - Relevant tests pass.
 - Critical user flows are manually checked or covered by e2e tests.
+
+## Documentation
+
+- Relevant documentation is written or updated in the `doc/` folder.
+- Important documentation is linked directly from `README.md`.
