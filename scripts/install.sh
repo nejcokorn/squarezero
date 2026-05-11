@@ -94,6 +94,9 @@ The AI Agent may read and edit files anywhere in this target project. The
 `.ai-guidelines` directory is the SquareZero submodule and should be treated as
 shared guidance unless the task is specifically to update SquareZero itself.
 
+When the AI Agent commits changes in this target project and a Git remote exists,
+it must also push the commit to the remote.
+
 These guidelines are mandatory unless the user explicitly overrides them.
 <!-- squarezero:end -->
 EOF

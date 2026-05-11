@@ -94,3 +94,4 @@ The agent should:
 - Verify changes with tests or a clear manual verification path.
 - Commit completed changes. If the target project does not have a Git
   repository, initialize one before committing.
+- After committing, push the commit when the target project has a Git remote.

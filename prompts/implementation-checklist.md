@@ -56,3 +56,4 @@ Use this checklist before considering a feature or page complete.
 
 - The target project has a Git repository. If one does not exist, initialize it.
 - Completed changes are committed with a clear commit message.
+- If the target project has a Git remote, committed changes are pushed.

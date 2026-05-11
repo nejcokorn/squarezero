@@ -63,3 +63,4 @@ details in project memory.
 - Keep implementation changes scoped to the requested task.
 - Run the relevant lint, typecheck, and test commands when available.
 - Report any verification that could not be completed.
+- Commit completed changes and push them when the project has a Git remote.
