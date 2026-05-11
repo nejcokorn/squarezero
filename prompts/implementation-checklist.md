@@ -51,3 +51,8 @@ Use this checklist before considering a feature or page complete.
 
 - Relevant documentation is written or updated in the `doc/` folder.
 - Important documentation is linked directly from `README.md`.
+
+## Version Control
+
+- The target project has a Git repository. If one does not exist, initialize it.
+- Completed changes are committed with a clear commit message.

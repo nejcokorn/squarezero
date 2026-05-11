@@ -91,3 +91,5 @@ The agent should:
 - Record durable project-specific decisions in local project memory.
 - Write or update documentation in the `doc/` folder for implemented features.
 - Verify changes with tests or a clear manual verification path.
+- Commit completed changes. If the target project does not have a Git
+  repository, initialize one before committing.
