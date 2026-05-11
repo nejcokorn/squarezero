@@ -67,6 +67,43 @@ The target project should also keep a local project memory file:
 
 This file records durable project-specific decisions.
 
+## Quick Install
+
+Run this from the root of the repository where you want to use SquareZero:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/nejcokorn/squarezero/main/scripts/install.sh | sh
+```
+
+The installer will:
+
+- download or update SquareZero in `.ai-guidelines/`
+- create `.ai-guidelines/ai-project-memory.md` if it does not exist
+- create or update `AGENTS.md`
+- preserve existing `AGENTS.md` content outside the SquareZero managed block
+- preserve `.ai-guidelines/ai-project-memory.md` during updates
+
+The installer replaces the rest of `.ai-guidelines/` with the latest SquareZero
+files. Keep project-specific notes in `.ai-guidelines/ai-project-memory.md`, not
+inside the shared guideline files.
+
+To use a different branch, repository, or target path:
+
+```bash
+SQUAREZERO_BRANCH=main \
+SQUAREZERO_REPO_URL=https://github.com/nejcokorn/squarezero.git \
+SQUAREZERO_TARGET_DIR=.ai-guidelines \
+SQUAREZERO_MEMORY_FILE=.ai-guidelines/ai-project-memory.md \
+SQUAREZERO_AGENTS_FILE=AGENTS.md \
+sh /path/to/squarezero/scripts/install.sh
+```
+
+When running the script from a local clone of SquareZero instead of `curl`, use:
+
+```bash
+sh /path/to/squarezero/scripts/install.sh
+```
+
 ## Option 1: Copy The Guidelines
 
 Copy this repository into the target project.

@@ -50,6 +50,12 @@ humans who want to connect these guidelines to another repository.
 For instructions on linking these guidelines to another project or repository,
 read `setup.md`.
 
+Quick install from the root of a target repository:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/nejcokorn/squarezero/main/scripts/install.sh | sh
+```
+
 ## Core Rule
 
 Build the actual usable product first. Do not default to a marketing landing
