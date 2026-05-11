@@ -24,6 +24,12 @@ Before making implementation changes, read and follow the SquareZero guidelines:
 
 These guidelines are mandatory unless the user explicitly overrides them.
 
+## Project Access
+
+The AI Agent may read and edit files anywhere in this target project. The
+`.ai-guidelines` directory is the SquareZero submodule and should be treated as
+shared guidance unless the task is specifically to update SquareZero itself.
+
 ## Local Project Memory
 
 Before making implementation changes, also read:
@@ -50,6 +56,8 @@ details in project memory.
 ## Repository Expectations
 
 - Inspect the existing codebase before making changes.
+- Read and edit files anywhere in the target project, not only inside the
+  `.ai-guidelines` submodule.
 - Read local project memory before choosing architecture or folder structure.
 - Follow existing project conventions.
 - Keep implementation changes scoped to the requested task.

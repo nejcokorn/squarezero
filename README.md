@@ -82,6 +82,8 @@ Write project documentation for implemented features and place it in the
 The agent should:
 
 - Inspect the existing codebase before making changes.
+- Read and edit files anywhere in the target project where SquareZero is
+  installed, not only inside the `.ai-guidelines` submodule.
 - Follow the selected technologies unless the user explicitly overrides them.
 - Prefer simple, maintainable implementation over unnecessary abstraction.
 - Build complete flows with loading, empty, error, and permission states.

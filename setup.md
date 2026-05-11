@@ -57,6 +57,11 @@ Before making implementation changes, read and follow the SquareZero guidelines:
 These guidelines are mandatory unless the user explicitly overrides them.
 ```
 
+The generated `AGENTS.md` also states that the AI Agent may read and edit files
+anywhere in the target project where `.ai-guidelines` is installed. The
+`.ai-guidelines` directory itself remains the SquareZero submodule and should be
+treated as shared guidance unless the task is specifically to update SquareZero.
+
 Keep `AGENTS.md` small. It should point to the guideline files instead of
 copying all guideline content into one large instruction file.
 

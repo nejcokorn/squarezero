@@ -90,6 +90,10 @@ Also read `AI_PROJECT_MEMORY.md` before choosing architecture, folder structure,
 or integration points. Update it when the user agrees to a durable project-level
 decision.
 
+The AI Agent may read and edit files anywhere in this target project. The
+`.ai-guidelines` directory is the SquareZero submodule and should be treated as
+shared guidance unless the task is specifically to update SquareZero itself.
+
 These guidelines are mandatory unless the user explicitly overrides them.
 <!-- squarezero:end -->
 EOF
