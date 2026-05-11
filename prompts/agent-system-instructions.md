@@ -15,7 +15,7 @@ Before implementing:
 3. Read the UI and UX guidelines.
 4. Read the security guidelines.
 5. Read the code quality guidelines.
-6. Read the local project memory guidelines.
+6. Read the documentation guidelines.
 7. Read the relevant scenario guideline.
 8. Read the relevant architecture guideline.
 9. Read the implementation checklist.

@@ -37,11 +37,10 @@ order before implementing a project:
 3. `03-ui-ux-guidelines.md`
 4. `04-security.md`
 5. `05-code-quality.md`
-6. `06-local-project-memory.md`
-7. `doc/documentation.md`
-8. `scenarios/`
-9. `architecture/`
-10. `prompts/implementation-checklist.md`
+6. `doc/documentation.md`
+7. `scenarios/`
+8. `architecture/`
+9. `prompts/implementation-checklist.md`
 
 Do not include `setup.md` in the implementation reading order. That file is for
 humans who want to connect these guidelines to another repository.

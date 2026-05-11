@@ -48,7 +48,6 @@ Before making implementation changes, read and follow the SquareZero guidelines:
 - `.ai-guidelines/03-ui-ux-guidelines.md`
 - `.ai-guidelines/04-security.md`
 - `.ai-guidelines/05-code-quality.md`
-- `.ai-guidelines/06-local-project-memory.md`
 - `.ai-guidelines/doc/documentation.md`
 - `.ai-guidelines/scenarios/`
 - `.ai-guidelines/architecture/`

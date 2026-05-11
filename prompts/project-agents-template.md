@@ -17,11 +17,10 @@ Before making implementation changes, read and follow the SquareZero guidelines:
 4. `.ai-guidelines/03-ui-ux-guidelines.md`
 5. `.ai-guidelines/04-security.md`
 6. `.ai-guidelines/05-code-quality.md`
-7. `.ai-guidelines/06-local-project-memory.md`
-8. `.ai-guidelines/doc/documentation.md`
-9. `.ai-guidelines/scenarios/`
-10. `.ai-guidelines/architecture/`
-11. `.ai-guidelines/prompts/implementation-checklist.md`
+7. `.ai-guidelines/doc/documentation.md`
+8. `.ai-guidelines/scenarios/`
+9. `.ai-guidelines/architecture/`
+10. `.ai-guidelines/prompts/implementation-checklist.md`
 
 These guidelines are mandatory unless the user explicitly overrides them.
 
