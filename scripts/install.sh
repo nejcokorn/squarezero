@@ -2,6 +2,7 @@
 set -eu
 
 AGENTS_FILE="${AGENT_GUIDELINES_FILE:-AGENTS.md}"
+CLAUDE_FILE="${AGENT_GUIDELINES_CLAUDE_FILE:-CLAUDE.md}"
 BRANCH="${AGENT_GUIDELINES_BRANCH:-main}"
 AGENTS_SOURCE_URL="${AGENT_GUIDELINES_SOURCE_URL:-https://raw.githubusercontent.com/nejcokorn/agentguidelines/$BRANCH/AGENTS.md}"
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
@@ -26,5 +27,11 @@ else
 fi
 
 cp "$TMP_SOURCE" "$AGENTS_FILE"
+{
+  echo "# CLAUDE.md"
+  echo
+  echo "@$AGENTS_FILE"
+} > "$CLAUDE_FILE"
 
 echo "Updated $AGENTS_FILE with agent guidelines."
+echo "Updated $CLAUDE_FILE to include $AGENTS_FILE."

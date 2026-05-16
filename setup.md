@@ -8,10 +8,12 @@ not a second source of agent instructions; the only instruction file is
 
 ```text
 AGENTS.md
+CLAUDE.md
 ```
 
 Do not install these guidelines as `.ai-guidelines/`. The target project should
-keep the instructions directly in its root `AGENTS.md`.
+keep the instructions directly in its root `AGENTS.md`. `CLAUDE.md` should only
+include `AGENTS.md` for Claude compatibility.
 
 ## Quick Install
 
@@ -25,12 +27,14 @@ The installer will:
 
 - create `AGENTS.md` if it does not exist
 - replace `AGENTS.md` with the current guidelines if it already exists
+- create or replace `CLAUDE.md` so it includes `AGENTS.md`
 
 To use a different branch, source URL, or output file:
 
 ```bash
 AGENT_GUIDELINES_BRANCH=main \
 AGENT_GUIDELINES_FILE=AGENTS.md \
+AGENT_GUIDELINES_CLAUDE_FILE=CLAUDE.md \
 AGENT_GUIDELINES_SOURCE_URL=https://raw.githubusercontent.com/nejcokorn/agentguidelines/main/AGENTS.md \
 sh /path/to/guidelines/scripts/install.sh
 ```
