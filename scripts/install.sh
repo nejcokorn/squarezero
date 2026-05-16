@@ -7,14 +7,10 @@ AGENTS_SOURCE_URL="${AGENT_GUIDELINES_SOURCE_URL:-https://raw.githubusercontent.
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 LOCAL_AGENTS_SOURCE="$SCRIPT_DIR/../AGENTS.md"
 
-AGENTS_BLOCK_START="<!-- agent-guidelines:start -->"
-AGENTS_BLOCK_END="<!-- agent-guidelines:end -->"
 TMP_SOURCE="$(mktemp)"
-TMP_AGENTS="$(mktemp)"
-TMP_EXISTING="$(mktemp)"
 
 cleanup() {
-  rm -f "$TMP_SOURCE" "$TMP_AGENTS" "$TMP_EXISTING"
+  rm -f "$TMP_SOURCE"
 }
 trap cleanup EXIT HUP INT TERM
 
@@ -29,36 +25,6 @@ else
   exit 1
 fi
 
-{
-  echo "$AGENTS_BLOCK_START"
-  sed '1{/^# AGENTS.md$/d;}' "$TMP_SOURCE"
-  echo "$AGENTS_BLOCK_END"
-} > "$TMP_AGENTS"
-
-if [ ! -f "$AGENTS_FILE" ]; then
-  {
-    echo "# AGENTS.md"
-    echo
-    cat "$TMP_AGENTS"
-  } > "$AGENTS_FILE"
-elif grep -q "$AGENTS_BLOCK_START" "$AGENTS_FILE"; then
-  awk -v start="$AGENTS_BLOCK_START" -v end="$AGENTS_BLOCK_END" '
-    $0 == start { skipping = 1; next }
-    $0 == end { skipping = 0; next }
-    skipping != 1 { print }
-  ' "$AGENTS_FILE" > "$TMP_EXISTING"
-  {
-    cat "$TMP_EXISTING"
-    echo
-    cat "$TMP_AGENTS"
-  } > "$AGENTS_FILE"
-else
-  {
-    cat "$AGENTS_FILE"
-    echo
-    cat "$TMP_AGENTS"
-  } > "$TMP_EXISTING"
-  mv "$TMP_EXISTING" "$AGENTS_FILE"
-fi
+cp "$TMP_SOURCE" "$AGENTS_FILE"
 
 echo "Updated $AGENTS_FILE with agent guidelines."

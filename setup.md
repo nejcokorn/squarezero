@@ -24,8 +24,7 @@ curl -fsSL https://raw.githubusercontent.com/nejcokorn/agentguidelines/main/scri
 The installer will:
 
 - create `AGENTS.md` if it does not exist
-- update the managed guidelines block in `AGENTS.md` if it already exists
-- preserve existing `AGENTS.md` content outside the managed guidelines block
+- replace `AGENTS.md` with the current guidelines if it already exists
 
 To use a different branch, source URL, or output file:
 
